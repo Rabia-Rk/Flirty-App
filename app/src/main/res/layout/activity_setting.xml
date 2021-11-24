@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.Setting_A">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/setting_TB_id"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="-15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/setting_back_id"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="12dp"
+                app:srcCompat="@drawable/ic_back_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/setting_back_id"
+                android:text="@string/settings"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/setting_view_id"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@+id/setting_TB_id"
+        android:background="@drawable/t_to_b_shadow" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/setting_view_id"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/setting_basic_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setting_bottom_border"
+            android:padding="15dp"
+            android:text="@string/basic_info"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/setting_account_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setting_bottom_border"
+            android:padding="15dp"
+            android:paddingStart="15dp"
+            android:text="@string/account"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/setting_account_pref_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setting_bottom_border"
+            android:padding="15dp"
+            android:text="@string/privacy_policy"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/setting_help_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setting_bottom_border"
+            android:padding="15dp"
+            android:text="@string/help_centre"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/setting_about_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setting_bottom_border"
+            android:padding="15dp"
+            android:text="@string/about"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/setting_blocked_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setting_bottom_border"
+            android:padding="15dp"
+            android:text="@string/blocked_users"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/Chat_Inbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setting_bottom_border"
+            android:padding="15dp"
+            android:text="@string/inbox"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <RelativeLayout
+            android:id="@+id/language_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/setting_bottom_border">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:text="@string/language"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/language_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:text="English"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/t_app_verson_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/app_version"
+            android:textColor="@color/gray"
+            android:textSize="16dp" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

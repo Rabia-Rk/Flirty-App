@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.Viewprofile_A">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/view_prof_rl_id"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="400dp">
+
+
+            <ImageView
+                android:id="@+id/ic_cancel"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="9dp"
+                android:src="@drawable/ic_cross"
+                android:tint="@color/white" />
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/view_prof_ci_id"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                app:ci_animator="@anim/indicator"
+                app:ci_drawable="@drawable/indicator_background"
+                app:ci_drawable_unselected="@drawable/indicator_unselect_background"
+                app:ci_gravity="center_horizontal"
+                app:ci_height="10dp"
+                app:ci_orientation="vertical"
+                app:ci_width="10dp">
+
+            </me.relex.circleindicator.CircleIndicator>
+
+        </RelativeLayout>
+
+        <Flirty_Datting_App.CodeClasses.VerticalViewPager
+            android:id="@+id/view_prof_vp_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_anchor="@+id/relativeLayout"
+            app:layout_anchorGravity="center">
+
+        </Flirty_Datting_App.CodeClasses.VerticalViewPager>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/d_border_transparent"
+        android:padding="15dp"
+        android:scrollbars="none"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/name_and_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HAni,22"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:padding="3dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_upload" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/about_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="I speak English"
+                android:textColor="@color/black" />
+
+            <com.nex3z.flowlayout.FlowLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/inflate_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/about_me_tv_id"
+                android:layout_marginTop="5dp"
+                app:flChildSpacing="10dp"
+                app:flChildSpacingForLastRow="align"
+                app:flRowSpacing="0dp">
+
+
+            </com.nex3z.flowlayout.FlowLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="About me"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/d_gray_border"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/IV_id"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp"
+                    app:srcCompat="@drawable/image_placeholder" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@+id/IV_id"
+                    android:text="Discover you lookalikes"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="16dp"
+                    app:srcCompat="@drawable/ic_next_gray" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Faisalabad"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Profile verified"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/IV_11_id"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:srcCompat="@drawable/ic_phone" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@+id/IV_11_id">
+
+                    <TextView
+                        android:id="@+id/TV19_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phone number"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/TV19_id"
+                        android:text="Connect"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/d_round_blue_border_radius8">
+
+                <Button
+                    android:id="@+id/logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:text="@string/sign_out"
+                    android:textAllCaps="false"
+                    android:textColor="@color/purple" />
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

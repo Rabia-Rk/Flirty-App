@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="Flirty_Datting_App.Activities.GetUserInfo_A">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_avatar" />
+
+                    <ImageButton
+                        android:id="@+id/edit_profile_image"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/transparent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_camera_white" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/d_border_bottom"
+                    android:orientation="horizontal"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp">
+
+                    <EditText
+                        android:id="@+id/first_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/transparent"
+                        android:hint="@string/first_name"
+                        android:inputType="textCapWords"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15dp" />
+
+
+                    <EditText
+                        android:id="@+id/last_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/transparent"
+                        android:hint="@string/last_name"
+                        android:inputType="textCapWords"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15dp" />
+
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/d_border_bottom">
+
+                    <EditText
+                        android:id="@+id/dateofbirth_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:backgroundTint="@color/transparent"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:hint="@string/date_of_birth"
+                        android:inputType="textCapWords"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:paddingStart="10dp">
+
+                    <RadioButton
+                        android:id="@+id/male_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="@string/male"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:theme="@style/RadioButton" />
+
+                    <RadioButton
+                        android:id="@+id/female_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/female"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:theme="@style/RadioButton" />
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/nextbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    app:cardBackgroundColor="@color/coloraccent"
+                    app:cardCornerRadius="25dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:gravity="center"
+                        android:text="@string/next"
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>
+

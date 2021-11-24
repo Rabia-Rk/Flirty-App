@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.BasicInfo_A">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/basic_info_TB_id"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="-15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/basic_info_back_id"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="12dp"
+                app:srcCompat="@drawable/ic_back_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/basic_info_back_id"
+                android:text="@string/basic_info"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/basic_view_id"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/basic_info_TB_id"
+        android:background="@drawable/t_to_b_shadow" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/basic_view_id">
+
+        <TextView
+            android:id="@+id/name_id"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/d_border_bottom"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="2dp"
+            android:paddingStart="15dp"
+            android:textAlignment="viewStart"
+            android:text="@string/name_nhani"
+            android:textColor="@color/black"
+            tools:ignore="RtlCompat" />
+
+        <TextView
+            android:id="@+id/birthday_id"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_below="@+id/name_id"
+            android:background="@drawable/d_border_bottom"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="2dp"
+            android:paddingStart="15dp"
+            android:text="@string/birthday_n16_12_1996"
+            android:textColor="@color/black" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_below="@+id/birthday_id"
+            android:background="@drawable/d_border_bottom"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/gender"
+                android:textColor="@color/black" />
+
+            <RadioGroup
+                android:id="@+id/basic_info_RG_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:checkedButton="@id/male_RB_id"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/male_RB_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:tag="Male" />
+
+                <ImageView
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/ic_account_gray" />
+
+                <RadioButton
+                    android:id="@+id/female_RB_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:tag="Female" />
+
+                <ImageView
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/ic_female_account" />
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

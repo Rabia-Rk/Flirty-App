@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.datting_package.Flirty_Datting_App">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name="com.datting_package.Flirty_Datting_App.Utils.HugMeApplication"
+        android:allowBackup="false"
+        tools:replace="allowBackup"
+        android:supportsRtl="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_app_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_app_icon"
+        android:theme="@style/AppTheme"
+        android:requestLegacyExternalStorage="true"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name="com.datting_package.Flirty_Datting_App.Activities.Login_A"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id"/>
+
+
+        <service android:name="com.datting_package.Flirty_Datting_App.PushNotifications.Notification_Receive">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name="com.datting_package.Flirty_Datting_App.Chat.Videos.Chat_Send_file_Service" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id"/>
+
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_hug" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/purple" />
+
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity android:name="com.datting_package.Flirty_Datting_App.Activities.ChatInbox_A"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity
+            android:name="com.datting_package.Flirty_Datting_App.Activities.Chat_A"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.facebook.ads.AudienceNetworkActivity"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name="com.soundcloud.android.crop.CropImageActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.datting_package.Flirty_Datting_App.Activities.Splashscreen_A"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.datting_package.Flirty_Datting_App.Activities.Login_Phone_A"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name="com.datting_package.Flirty_Datting_App.Activities.GetUserInfo_A"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name="com.datting_package.Flirty_Datting_App.VideoCalling.VideoActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+
+
+
+        <activity
+            android:name="com.datting_package.Flirty_Datting_App.Activities.EditProfileVp_A"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.datting_package.Flirty_Datting_App.Activities.Account_A"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name="com.datting_package.Flirty_Datting_App.Activities.ShareProfile_A"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.datting_package.Flirty_Datting_App.Activities.Setting_A"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.datting_package.Flirty_Datting_App.Activities.BasicInfo_A"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.datting_package.Flirty_Datting_App.Activities.MainActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.datting_package.Flirty_Datting_App.Activities.EditProfile_A"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.datting_package.Flirty_Datting_App.Activities.Viewprofile_A"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.datting_package.Flirty_Datting_App.Activities.Living_A"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.datting_package.Flirty_Datting_App.Activities.Children_A"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.datting_package.Flirty_Datting_App.Activities.Smoking_A"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.datting_package.Flirty_Datting_App.Activities.Drinking_A"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.datting_package.Flirty_Datting_App.Activities.Relationship_A"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.datting_package.Flirty_Datting_App.Activities.Sexuality_A"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.datting_package.Flirty_Datting_App.Activities.Segments_A"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name="com.datting_package.Flirty_Datting_App.Activities.BlockedUser_A"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name="com.datting_package.Flirty_Datting_App.Activities.SearchPlaces_A"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name="com.datting_package.Flirty_Datting_App.Activities.EnableLocation_A"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat"/>
+
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_developer_api_key" />
+
+
+        <receiver
+            android:name=".PushNotifications.CustomNotificationReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.example.LocalBot" />
+            </intent-filter>
+        </receiver>
+
+
+        <activity
+            android:name=".LiveStreaming.activities.StreamingMain_A"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <activity
+            android:name=".LiveStreaming.activities.LiveActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
+            android:theme="@style/transparent_status"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+
+        <activity
+            android:name=".LiveStreaming.activities.SettingsActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity
+            android:name="cat.ereza.customactivityoncrash.activity.DefaultErrorActivity"
+            android:process=":error_activity"
+            android:theme="@style/error_activity_theme" />
+
+
+    </application>
+
+</manifest>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.thekhaeng:recycler-margin:1.2.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/53b0c1f82715b38741f0a01ff2467029/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/53b0c1f82715b38741f0a01ff2467029/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/53b0c1f82715b38741f0a01ff2467029/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

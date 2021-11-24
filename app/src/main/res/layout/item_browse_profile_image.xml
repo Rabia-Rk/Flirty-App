@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/RL_add_img"
+        android:layout_width="105dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/d_dotted_blue_line">
+
+
+        <ImageView
+            android:id="@+id/ic_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_image" />
+
+        <TextView
+            android:id="@+id/browse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_image"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/browse"
+            android:textColor="@color/purple"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/browse"
+            android:gravity="center"
+            android:text="@string/size_610x350px"
+            android:textColor="@color/gray" />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

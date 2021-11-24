@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.Account_A">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/account_TB_id"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="-15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/account_back_id"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="12dp"
+                app:srcCompat="@drawable/ic_back_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/account_back_id"
+                android:text="@string/account"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/account_view_id"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/account_TB_id"
+        android:background="@drawable/t_to_b_shadow" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/account_view_id"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
+
+        <RelativeLayout
+            android:id="@+id/profile_info_rl_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:id="@+id/profile_RL_id"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/userimage_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/image_placeholder"
+                    app:roundAsCircle="true"
+                    fresco:failureImage="@drawable/ic_user_icon"
+                    fresco:placeholderImage="@drawable/ic_user_icon" />
+
+                <ImageView
+                    android:id="@+id/add_photo_img_id"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    app:srcCompat="@drawable/ic_camera_white" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/username_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_RL_id"
+
+                android:layout_centerHorizontal="true"
+                android:text="@string/username_age"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/see_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/username_txt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="1dp"
+                android:text="Tap to see your profile"
+                android:textColor="@color/purple"
+                android:textSize="14dp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/account_RL_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_info_rl_id"
+            android:background="@drawable/d_border_bottom"
+
+            android:paddingTop="30dp"
+            android:paddingBottom="15dp">
+
+            <TextView
+                android:id="@+id/account_TV_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:layout_toStartOf="@+id/account_CB_id"
+                android:text="@string/hide_account"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/account_TV_id"
+                android:layout_marginEnd="25dp"
+                android:layout_toStartOf="@+id/account_CB_id"
+                android:text="@string/like_you_deleted_it_but_you_can_come_back_when_you_like" />
+
+            <CheckBox
+                android:id="@+id/account_CB_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/account_TV1_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/account_RL_id"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Make sure you can remember your password, as you'll need it to sign back in."
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/account_TV2_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/account_TV1_id"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/d_border_bottom"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:text="+923041****04"
+            android:visibility="gone" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/signout_RKL_id"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/account_TV2_id"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            app:cardBackgroundColor="@color/purple"
+            app:cardCornerRadius="8dp">
+
+            <Button
+                android:id="@+id/account_signout_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:text="@string/sign_out"
+                android:textColor="@color/white" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/signout_RKL_id"
+            android:layout_margin="20dp"
+            android:background="@drawable/d_round_blue_border_radius8"
+            android:visibility="gone"
+            app:cardCornerRadius="8dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:text="Forgot password?"
+                android:textColor="@color/black" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/delete_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:text="@string/delete_account"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

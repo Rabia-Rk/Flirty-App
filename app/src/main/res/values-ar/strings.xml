@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hugme Social</string>
+
+
+
+    <string name="loading">جار التحميل ...</string>
+
+    <!-- Main Activity -->
+    <string name="start_broadcast_title">ابدأ البث المباشر</string>
+    <string name="topic_edit_hint">تلميح تحرير الموضوع</string>
+    <string name="need_necessary_permissions">الحصول على الأذونات اللازمة</string>
+    <string name="invalid_phone_no">رقم الهاتف غير صالح</string>
+    <string name="cant_empty">لا يمكن إفراغها!</string>
+    <!-- Setting Activity -->
+    <string name="setting_title">إعدادات</string>
+    <string name="setting_resolution_title">الدقة</string>
+    <string name="setting_stats_title">إظهار إحصائيات الفيديو</string>
+    <string name="setting_mirror_local_title">وضع مرآة معاينة الفيديو المحلي</string>
+    <string name="setting_mirror_remote_title">وضع مرآة عرض الفيديو عن بعد</string>
+    <string name="setting_mirror_encode_title">ترميز الفيديو المحلي في وضع المرآة</string>
+
+    <!-- Live Activity -->
+
+
+
+    <string name="account">الحساب</string>
+    <string name="username_age">اسم المستخدم والعمر</string>
+    <string name="hide_account">إخفاء الحساب</string>
+    <string name="like_you_deleted_it_but_you_can_come_back_when_you_like">كما حذفته ، ولكن يمكنك العودة متى شئت.</string>
+    <string name="sign_out">خروج</string>
+    <string name="delete_account">حذف الحساب</string>
+
+
+    <string name="basic_info">معلومات أساسية</string>
+    <string name="name_nhani">الاسم \n هاني</string>
+    <string name="birthday_n16_12_1996">عيد الميلاد \n16/12/1996</string>
+    <string name="gender">جنس</string>
+
+    <string name="blocked_users">مستخدمين محجوبين</string>
+
+
+    <string name="user_name">اسم المستخدم</string>
+    <string name="message">رسالة ...</string>
+    <string name="inbox">صندوق الوارد</string>
+    <string name="children">الأطفال</string>
+
+
+
+
+    <string name="about_you">حولك</string>
+    <string name="write_a_bit_about_yourself">اكتب القليل عن نفسك ...</string>
+    <string name="living">المعيشة</string>
+    <string name="smoking">التدخين</string>
+    <string name="drinking">الشرب</string>
+    <string name="relationship">صلة</string>
+    <string name="sexuality">الجنسانية</string>
+    <string name="appearance">مظهر خارجي</string>
+    <string name="phone_number">رقم الهاتف</string>
+
+
+    <string name="how_do_you_describe_n_yourself">كيف تصف \ n نفسك...</string>
+
+
+    <string name="enable_location">تمكن موقع</string>
+    <string name="you_ll_need_to_enable_your_location_n_in_order_to_use_hugme">ستحتاج إلى تمكين موقعك \ n من أجل استخدام Hugme</string>
+    <string name="allow_location">السماح للموقع</string>
+
+
+    <string name="first_name">الاسم الاول</string>
+    <string name="last_name">الكنية</string>
+    <string name="date_of_birth">تاريخ الولادة</string>
+    <string name="male">الذكر</string>
+    <string name="female">أنثى</string>
+    <string name="next">التالى</string>
+
+
+
+    <string name="see_who_likes_you">انظر من يحبك؟</string>
+    <string name="unlimited_boost">دفعة غير محدودة</string>
+    <string name="_19_99">$19.99</string>
+    <string name="per_month">لكل شهر</string>
+    <string name="_29_99">$29.99</string>
+    <string name="_3_months">3 اشهر</string>
+    <string name="_69_99">$69.99</string>
+    <string name="_1_year">1 عام</string>
+    <string name="continue_txt">استمرار_ملف</string>
+    <string name="no_thanks"> لا شكرا</string>
+    <string name="subscription_txt">من خلال النقر على "متابعة" ، سيتم خصم دفعتك من Google Play الخاص بك
+        الحساب ، وسيتم تجديد اشتراكك تلقائيًا لنفس الحساب
+        طول الحزمة بنفس السعر حتى تلغيها في الإعدادات في
+        متجر Google Play قبل 24 ساعة على الأقل من نهاية الفترة الحالية.
+        بالنقر على "متابعة" ، فإنك توافق على سياسة الخصوصية وشروطنا.</string>
+    <string name="recuring_billing_cancel_anytime">جاري استرداد الفواتير في أي وقت.</string>
+
+
+
+
+    <string name="live">حي</string>
+    <string name="leave_a_comment">اترك تعليقا...</string>
+
+
+    <string name="login_with">Login with...</string>
+    <string name="continue_with_facebook">تواصل مع Facebook</string>
+    <string name="continue_with_google">تواصل مع Google</string>
+    <string name="continue_with_phone_number">تواصل مع Phone number</string>
+    <string name="don_t_worry_we_never_post_on_facebook">لا تقلق! نحن لا ننشر أبدا على Facebook.</string>
+    <string name="privacy">خصوصية -</string>
+    <string name="terms_of_service">شروط الخدمة</string>
+
+
+    <string name="phonetext">أدخل رقم هاتف يمكن استخدامه للتحقق من هويتك برسالة نصية أو مكالمة هاتفية.</string>
+    <string name="your_phone_number">رقم تليفونك</string>
+    <string name="usa">USA</string>
+    <string name="verify_phone">تحقق من الهاتف</string>
+    <string name="confirm">تؤكد</string>
+    <string name="we_send_you_a_code_to_verify_your_phone_number">نرسل لك رمزًا للتحقق من رقم هاتفك</string>
+    <string name="send_to">ارسل إلى ()</string>
+    <string name="i_did_t_receive_a_code">لم أتلق رمزًا!</string>
+    <string name="resend">إعادة إرسال</string>
+
+
+    <string name="search">بحث</string>
+    <string name="cancel">إلغاء</string>
+    <string name="current_location">الموقع الحالي</string>
+
+
+    <string name="settings">إعدادات</string>
+    <string name="privacy_policy">سياسة الخصوصية</string>
+    <string name="help_centre">مركز المساعدة</string>
+    <string name="about">حول</string>
+    <string name="app_version">نسخة التطبيق</string>
+
+
+    <string name="share_profile">مشاركة الملف الشخصي</string>
+
+
+    <string name="username">اسم المستخدم</string>
+
+
+    <string name="about_me">عني</string>
+
+
+    <string name="testing">اختبارات</string>
+
+
+
+
+    <string name="introducting_hugme_boost">تقديم تعزيز الموثق</string>
+    <string name="skip_the_line">تعدى الخط</string>
+    <string name="be_the_top_profile_in_your_area_for_30_minutes_and_get_more_watchs">كن الشخصية البارزة في منطقتك لمدة 30 دقيقة واحصل على المزيد من الساعات</string>
+    <string name="boost_me">تعزيز لي</string>
+    <string name="_08_85_remaining">المتبقي 08:85</string>
+    <string name="you_re_being_seen_by_more_people_keep_swiping_for_the_best_results">يشاهدك المزيد من الأشخاص. استمر في التمرير سريعًا للحصول على أفضل النتائج!</string>
+    <string name="okey">حسنا</string>
+
+
+
+    <string name="describe_yourself_to_someone_who_doesn_t_know_you">صف نفسك لشخص لا يعرفك</string>
+
+
+    <string name="no_other_user_is_live_at_that_time_n_click_of_go_live_for_live_video_streaming">لا يوجد مستخدم آخر مباشر في ذلك الوقت. \n انقر فوق  انطلق  للبث المباشر للفيديو.</string>
+
+    <string name="go_live">انطلق</string>
+
+    <string name="tap_to_see_your_profile">انقر لرؤية ملفك الشخصي</string>
+    <string name="get_more_attention_ncomplete_your_profile">احصل على مزيد من الانتباه - \n أكمل ملفك الشخصي</string>
+    <string name="hugme_premium">Hugme الممتازة</string>
+    <string name="activate">تفعيل</string>
+    <string name="popularity">شعبية</string>
+    <string name="very_low">منخفظ جدا</string>
+
+
+    <string name="upload_photo">حمل الصورة</string>
+
+
+
+
+
+    <string name="hey_user_when_s_your_birthday">مرحبًا  مستخدم! متى عيد ميلادك؟</string>
+    <string name="day">يوم</string>
+    <string name="d">D</string>
+    <string name="month">شهر</string>
+    <string name="m">M</string>
+    <string name="year">عام</string>
+    <string name="y">Y</string>
+    <string name="you_must_be_at_least_18_to_use_hugme">يجب أن يكون عمرك 18 عامًا على الأقل لاستخدام Hugme</string>
+
+    <string name="what_s_your_email">ما هو بريدك الإلكتروني؟</string>
+    <string name="sign_up_with_phone_number_instead">اشترك برقم الهاتف بدلا من ذلك</string>
+    <string name="sign_up_with_email_instead">اشترك بالبريد الإلكتروني بدلاً من ذلك</string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="password">كلمه السر</string>
+    <string name="mobile_number">رقم الهاتف المحمول</string>
+
+    <string name="hey_you_re">مهلا! أنت على...</string>
+
+    <string name="next_up_what_s_your_name">التالي ، ما اسمك؟</string>
+    <string name="this_is_how_you_ll_appear_on_hugme">هذه هي الطريقة التي ستظهر بها على Hugme</string>
+
+    <string name="likes">الإعجابات</string>
+    <string name="browse">تصفح</string>
+    <string name="size_610x350px">الحجم 610x350px</string>
+
+
+    <string name="calling">جارٍ الاتصال ...</string>
+    <string name="reconnecting_to">جارٍ إعادة الاتصال بـ</string>
+    <string name="reconnecting">جارٍ إعادة الاتصال</string>
+    <string name="connected_to">متصلا</string>
+    <string name="connected">متصل</string>
+    <string name="failed_to_connect">فشل الاتصال</string>
+    <string name="disconnected">انقطع الاتصال</string>
+    <string name="disconnected_from">تم قطع الاتصال بـ</string>
+    <string name="audio_connected">تم توصيل الصوت</string>
+    <string name="audio_unpublished">صوت غير منشور</string>
+    <string name="video_connected">تم توصيل الفيديو</string>
+    <string name="video_unpublished">فيديو غير منشور</string>
+    <string name="audio_subscribed">تم اشتراك الصوت</string>
+    <string name="audio_unsubscribed">إلغاء الاشتراك في الصوت</string>
+    <string name="audio_subscription_failed">فشل الاشتراك الصوتي</string>
+    <string name="video_subscribed">تم اشتراك الفيديو</string>
+    <string name="video_unsubscribed">فيديو غير مشترك</string>
+    <string name="video_subscription_failed">فشل الاشتراك في الفيديو</string>
+    <string name="joined">انضم</string>
+    <string name="ringing">رنين...</string>
+    <string name="alert">إنذار</string>
+    <string name="voice_reah_limit">لقد وصلت إلى حد مكالماتك الصوتية.</string>
+    <string name="video_reach_limit">لقد تجاوزت حد مكالمات الفيديو.</string>
+
+
+    <string name="language">لغة</string>
+    <string name="search_sticker">ابحث عن ملصق</string>
+    <string name="search_gifs">ابحث عن صور متحركة</string>
+    <string name="take_photo">تصوير</string>
+    <string name="choose_gallery">اختر صورة من المعرض</string>
+    <string name="select_video">حدد الفيديو</string>
+    <string name="select">تحديد</string>
+    <string name="unmatch_user">الأمم المتحدة مباراة المستخدم</string>
+    <string name="are_you_sure_delete_account">هل أنت متأكد من حذف الحساب؟</string>
+    <string name="yes">نعم</string>
+    <string name="no">لا</string>
+
+    <string name="permission_granted">"تم تأمين التصريح "</string>
+    <string name="please_grant_permission">يرجى منح الإذن</string>
+    <string name="select_image">اختر صورة</string>
+    <string name="please_enter_first_name">يرجى ادخال الاسم الاول</string>
+    <string name="please_enter_last_name">يرجى إدخال اسم العائلة</string>
+    <string name="please_enter_date_of_birth">الرجاء ادخال تاريخ ميلادك</string>
+    <string name="unblock">رفع الحظر</string>
+
+    <string name="version_txt">الإصدار</string>
+
+    <string name="location">موقعك</string>
+    <string name="distance">مسافة</string>
+    <string name="show_me">أرني</string>
+    <string name="filter_by">مصنف بواسطة</string>
+    <string name="age">عمر</string>
+    <string name="filter">منقي</string>
+    <string name="block">حاجز</string>
+    <string name="report">نقل</string>
+    <string name="share_this_profile">شارك هذا الملف</string>
+    <string name="block_or_report">الحظر أو الإبلاغ</string>
+    <string name="send_a_gift_to_start_chatting">أرسل هدية لبدء الدردشة</string>
+    <string name="send_a_gift">أرسل هدية</string>
+    <string name="edit_profile">تعديل الملف الشخصي</string>
+    <string name="name">اسم</string>
+    <string name="birthday">عيد الميلاد</string>
+</resources>

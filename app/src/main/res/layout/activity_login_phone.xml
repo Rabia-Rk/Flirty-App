@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="Flirty_Datting_App.Activities.Login_Phone_A">
+
+    <ViewFlipper
+        android:id="@+id/viewfillper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_weight="1"
+                android:background="@color/white"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="70dp"
+                        android:layout_height="28dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:background="@color/transparent"
+                        android:onClick="goback1"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/ic_back_gray" />
+
+                    <TextView
+                        android:id="@+id/nextbtn"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="15dp"
+                        android:background="@color/transparent"
+                        android:gravity="end"
+                        android:onClick="nextbtn"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="@string/next"
+                        android:textColor="@color/coloraccent"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/phone_number"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="18dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="6dp"
+                        android:text="@string/phonetext"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:background="@color/dark_gray"
+                            tools:ignore="Suspicious0dp" />
+
+                        <RelativeLayout
+                            android:id="@+id/select_country"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp">
+
+                            <TextView
+                                android:id="@+id/countrytxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="@string/usa"
+                                android:textColor="@color/black"
+                                android:textSize="13dp" />
+
+                            <ImageButton
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:background="@color/transparent"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_next_gray" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:background="@color/dark_gray" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp">
+
+                            <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+                                android:id="@+id/ccp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                app:ccp_enablePhoneAutoFormatter="true" />
+
+                            <TextView
+                                android:id="@+id/countrycodetxt"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="15dp" />
+
+                            <LinearLayout
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_toEndOf="@+id/countrycodetxt"
+                                android:background="@color/dark_gray" />
+
+                            <EditText
+                                android:id="@+id/phonetxt"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="5dp"
+                                android:layout_toEndOf="@+id/countrycodetxt"
+                                android:background="@color/transparent"
+                                android:hint="@string/your_phone_number"
+                                android:inputType="phone"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/gray"
+                                android:textSize="15dp" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:background="@color/black" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar2"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_weight="1"
+                android:background="@color/white"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="70dp"
+                        android:layout_height="32dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:background="@color/transparent"
+                        android:onClick="goback"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/ic_back_gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/verify_phone"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="15dp"
+                        android:background="@color/transparent"
+                        android:gravity="end"
+                        android:onClick="verifyCode"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="@string/confirm"
+                        android:textColor="@color/coloraccent"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar2"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginEnd="25dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="10dp"
+                        android:text="@string/we_send_you_a_code_to_verify_your_phone_number"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/sendtotxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="6dp"
+                        android:text="@string/send_to"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/digitone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:background="@drawable/d_oval_shape"
+                            android:ems="1"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:textColor="@color/black"
+                            android:textSize="35sp" />
+
+                        <EditText
+                            android:id="@+id/digittwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/d_oval_shape"
+                            android:ems="1"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:textColor="@color/black"
+                            android:textSize="35sp" />
+
+                        <EditText
+                            android:id="@+id/digitthree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/d_oval_shape"
+                            android:ems="1"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:textColor="@color/black"
+                            android:textSize="35sp" />
+
+                        <EditText
+                            android:id="@+id/digitfour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/d_oval_shape"
+                            android:ems="1"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:textColor="@color/black"
+                            android:textSize="35sp" />
+
+                        <EditText
+                            android:id="@+id/digitfive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/d_oval_shape"
+                            android:ems="1"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:textColor="@color/black"
+                            android:textSize="35sp" />
+
+                        <EditText
+                            android:id="@+id/digitsix"
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/d_oval_shape"
+                            android:ems="1"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:textColor="@color/black"
+                            android:textSize="35sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/i_did_t_receive_a_code"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:onClick="resendCode"
+                        android:text="@string/resend"
+                        android:textColor="@color/coloraccent"
+                        android:textSize="18dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </ViewFlipper>
+
+</FrameLayout>

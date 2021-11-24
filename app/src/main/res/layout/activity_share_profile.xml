@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.ShareProfile_A">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:elevation="5dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="12dp"
+                app:srcCompat="@drawable/ic_back_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/back_btn"
+                android:text="@string/share_profile"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/profile_sharing_view_id"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/toolbar"
+        android:background="@drawable/t_to_b_shadow" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:id="@+id/profile_card_layout"
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/userimage_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    app:actualImageScaleType="centerCrop"
+                    app:placeholderImageScaleType="centerCrop"
+                    fresco:placeholderImage="@drawable/ic_user_icon" />
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="4"
+                    android:shadowDy="4"
+                    android:shadowRadius="4"
+                    android:text="UserName"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/share_profile_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_below="@+id/card_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            app:cardBackgroundColor="@color/coloraccent"
+            app:cardCornerRadius="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:gravity="center"
+                android:text="@string/share_profile"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

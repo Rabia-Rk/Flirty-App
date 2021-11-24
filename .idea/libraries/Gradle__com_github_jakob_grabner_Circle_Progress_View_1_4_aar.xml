@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.jakob-grabner:Circle-Progress-View:1.4@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1d99ffd45a21deae6e15395223bf7eb6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1d99ffd45a21deae6e15395223bf7eb6/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1d99ffd45a21deae6e15395223bf7eb6/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

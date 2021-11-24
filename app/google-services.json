@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "607090702386",
+    "firebase_url": "https://flirty-cbc42-default-rtdb.firebaseio.com",
+    "project_id": "flirty-cbc42",
+    "storage_bucket": "flirty-cbc42.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607090702386:android:0b6adb00077aee6702242b",
+        "android_client_info": {
+          "package_name": "com.datting_package.Flirty_Datting_App"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "607090702386-9c75cn90ivkd5sac1oblhk0fk5kj3tbl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.datting_package.Flirty_Datting_App",
+            "certificate_hash": "39409a25e2d8b646a911979924947f376e2cfd04"
+          }
+        },
+        {
+          "client_id": "607090702386-0ui1apk09t5i84jsgc40juekver6ajbu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEruhrv3E6KA2BMrkDHyrBU_t5T1DRuzI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "607090702386-0ui1apk09t5i84jsgc40juekver6ajbu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

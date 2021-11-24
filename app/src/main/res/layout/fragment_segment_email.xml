@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp">
+
+        <TextView
+            android:id="@+id/email_title_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/what_s_your_email"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/email_TV_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email_title_id"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="5dp"
+            android:paddingBottom="15dp"
+            android:text="@string/sign_up_with_phone_number_instead"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/phone_TV_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email_title_id"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="5dp"
+            android:paddingBottom="15dp"
+            android:text="@string/sign_up_with_email_instead"
+            android:textColor="@color/black"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email_TV_id"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/email_ET_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/password_ET_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/phone_LL_id"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/phone_TV_id"
+            android:layout_marginTop="60dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/inner_LL1_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp">
+
+                <TextView
+                    android:id="@+id/phone_number_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="10dp"
+                    android:text="+92"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="6dp"
+                    app:srcCompat="@drawable/ic_down_arrow" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/inner_LL1_id"
+                android:paddingBottom="2dp">
+
+
+                <EditText
+                    android:id="@+id/Number_verify_ET_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:hint="@string/mobile_number"
+                    android:inputType="number"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="@color/purple"
+            app:cardCornerRadius="8dp">
+
+            <Button
+                android:id="@+id/email_btn_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:text="@string/continue_txt"
+                android:textColor="@color/white" />
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</RelativeLayout>

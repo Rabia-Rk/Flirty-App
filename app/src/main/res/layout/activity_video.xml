@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:keepScreenOn="true"
+    tools:context="Flirty_Datting_App.VideoCalling.VideoActivity">
+
+    <include layout="@layout/content_video" />
+
+
+    <RelativeLayout
+        android:id="@+id/calling_user_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.3"
+            android:background="@color/black" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:text="@string/username"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+
+            <TextView
+                android:id="@+id/calling_status_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/username"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/calling"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+            <com.github.florent37.shapeofview.shapes.RoundRectView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_below="@+id/calling_status_txt"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                app:shape_roundRect_bottomLeftRadius="60dp"
+                app:shape_roundRect_bottomRightRadius="60dp"
+                app:shape_roundRect_topLeftRadius="60dp"
+                app:shape_roundRect_topRightRadius="60dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/userimage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:actualImageScaleType="centerCrop"
+                    fresco:placeholderImage="@drawable/ic_user_icon" />
+
+            </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+
+            <RelativeLayout
+                android:id="@+id/receive_disconnect_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="60dp"
+                android:visibility="gone">
+
+                <ImageButton
+                    android:id="@+id/cancel_incoming_btn"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_cancel_incoming" />
+
+                <ImageButton
+                    android:id="@+id/pick_incoming_call"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentStart="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/receive_call" />
+
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/cancel_call"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="60dp"
+                android:background="@color/transparent"
+                android:padding="15dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_cancel_incoming"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/calling_action_btns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="50dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/connect_action_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_call_end_white_24px"
+            app:backgroundTint="@color/pink_color"
+            app:fabSize="normal" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/switch_camera_action_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_switch_camera_white_24dp"
+            app:backgroundTint="@color/white"
+            app:fabSize="normal" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/local_video_action_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_videocam_white_24dp"
+            app:backgroundTint="@color/white"
+            app:fabSize="normal" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/mute_action_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_mic_white_24dp"
+            app:backgroundTint="@color/white"
+            app:fabSize="normal" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/speaker_action_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_volume_up_white_24dp"
+            app:backgroundTint="@color/white"
+            app:fabSize="normal" />
+
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

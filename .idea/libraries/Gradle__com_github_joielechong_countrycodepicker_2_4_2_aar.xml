@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.joielechong:countrycodepicker:2.4.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/15d6d231d617b0a4058c9ae3af636243/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/15d6d231d617b0a4058c9ae3af636243/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/15d6d231d617b0a4058c9ae3af636243/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

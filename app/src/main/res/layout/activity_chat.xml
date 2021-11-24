@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Chat_F"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Chat_A">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_id"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="-15dp"
+        android:background="@color/purple">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back_id"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_back_left" />
+
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/userimage"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/back_id"
+                android:paddingStart="4dp"
+                android:paddingTop="7dp"
+                android:paddingEnd="4dp"
+                android:paddingBottom="7dp"
+                fresco:placeholderImage="@drawable/ic_user_icon"
+                fresco:roundAsCircle="true" />
+
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/userimage"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/user_name"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+
+            <ImageButton
+                android:id="@+id/video_call_btn"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="7dp"
+                android:layout_toStartOf="@+id/voice_call_btn"
+                android:background="@color/transparent"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_video" />
+
+            <ImageButton
+                android:id="@+id/voice_call_btn"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="7dp"
+                android:layout_toStartOf="@+id/ic_more"
+                android:background="@color/transparent"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_call" />
+
+
+            <ImageView
+                android:id="@+id/ic_more"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:padding="3dp"
+                android:src="@drawable/ic_more" />
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_RL"
+        android:layout_below="@+id/tb_id"/>
+
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tb_id"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="0dp"
+        fresco:adSize="BANNER"
+        fresco:adUnitId="ca-app-pub-3940256099942544/6300978111"/>
+
+
+    <LinearLayout
+        android:id="@+id/gif_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_above="@+id/bottom_RL"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/hide_gif_layout"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@color/transparent"
+            android:backgroundTint="@color/colorPrimary"
+            android:padding="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_down_arrow" />
+
+        <com.chauthai.overscroll.RecyclerViewBouncy
+            android:id="@+id/gif_recylerview"
+            android:layout_width="match_parent"
+            android:layout_height="60dp" />
+
+    </LinearLayout>
+
+
+    <!--    New Layout for sending msgs-->
+
+    <RelativeLayout
+        android:id="@+id/bottom_RL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/blocked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textColor="@color/purple"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:id="@+id/writechatlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_marginBottom="3dp">
+
+            <ImageView
+                android:id="@+id/select_camera_2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_cam_new" />
+
+
+            <RelativeLayout
+                android:id="@+id/send_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/send_btn"
+                android:layout_toEndOf="@+id/select_camera_2"
+                android:background="@drawable/d_round_gray_border_radius50"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/select_camera"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_attachment"
+                    android:visibility="gone" />
+
+
+                <EditText
+                    android:id="@+id/msgedittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@+id/upload_stiker_btn"
+                    android:layout_toEndOf="@+id/select_camera"
+                    android:background="@color/transparent"
+                    android:hint="@string/message"
+                    android:imeOptions="actionSend"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:maxLines="3"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="14dp" />
+
+
+                <!--<ImageButton-->
+                <!--android:layout_width="40dp"-->
+                <!--android:layout_height="32dp"-->
+                <!--android:src="@drawable/ic_send"-->
+                <!--android:id="@+id/sendbtn_1"-->
+                <!--android:scaleType="fitXY"-->
+                <!--android:visibility="gone"-->
+                <!--android:paddingRight="8dp"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:background="@color/transparent" />-->
+
+                <ImageButton
+                    android:id="@+id/upload_stiker_btn"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@+id/upload_gif_btn"
+                    android:background="@color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_smilly" />
+
+
+                <ImageButton
+                    android:id="@+id/upload_gif_btn"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@+id/uploadimagebtn"
+                    android:background="@color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_gif" />
+
+
+                <ImageButton
+                    android:id="@+id/uploadimagebtn"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:background="@color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_attachment"
+                    android:visibility="gone"
+
+                    />
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/send_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_msg_send_gray" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:visibility="gone">
+
+                <!--<ImageButton-->
+                <!--android:layout_width="24dp"-->
+                <!--android:layout_height="24dp"-->
+                <!--android:scaleType="fitXY"-->
+                <!--android:id="@+id/upload_stiker_btn"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:background="@color/transparent"-->
+                <!--android:src="@drawable/ic_smilly"/>-->
+
+                <!--<ImageButton-->
+                <!--android:layout_width="24dp"-->
+                <!--android:layout_height="24dp"-->
+                <!--android:scaleType="fitXY"-->
+                <!--android:id="@+id/upload_gif_btn"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:background="@color/transparent"-->
+                <!--android:src="@drawable/ic_gif"/>-->
+
+                <!--<ImageButton-->
+                <!--android:layout_width="24dp"-->
+                <!--android:layout_height="24dp"-->
+                <!--android:scaleType="fitXY"-->
+                <!--android:id="@+id/uploadimagebtn"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:background="@color/transparent"-->
+                <!--android:src="@drawable/ic_gray_plus"/>-->
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/writechatlayout">
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <!--    End layout to send msgs-->
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+
+</RelativeLayout>

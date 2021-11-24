@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fl_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:background="@color/full_transparent"
+    android:focusable="true"
+    app:behavior_hideable="true">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="46dp"
+        android:padding="20dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedscrollview_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/profile_iv_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="500dp"
+                            android:foreground="@drawable/transparent_from_bottom_to_top"
+                            fresco:actualImageScaleType="centerCrop"
+                            fresco:failureImage="@drawable/ic_user_icon"
+                            fresco:failureImageScaleType="centerCrop"
+                            fresco:placeholderImage="@drawable/ic_user_icon"
+                            fresco:placeholderImageScaleType="centerCrop" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="15dp">
+
+                        <TextView
+                            android:id="@+id/simple_about"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/about_me"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+
+                        <TextView
+                            android:id="@+id/about_me_tv_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/simple_about"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/about_me"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+
+                        <ImageView
+                            android:id="@+id/share_id"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_alignParentEnd="true"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_upload"
+                            android:visibility="gone" />
+
+
+                        <ImageView
+                            android:id="@+id/favorite_id"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_toStartOf="@+id/share_id"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_star_line"
+                            android:visibility="gone" />
+
+
+                        <com.nex3z.flowlayout.FlowLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/inflate_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/about_me_tv_id"
+                            app:flChildSpacing="10dp"
+                            app:flChildSpacingForLastRow="align"
+                            app:flRowSpacing="0dp">
+
+
+                        </com.nex3z.flowlayout.FlowLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginTop="30dp"
+                        android:visibility="gone"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/image_placeholder" />
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:foreground="@color/normal_transparent">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/image_placeholder" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="4 more photos"
+                                    android:textColor="@color/white"
+                                    android:textSize="14dp" />
+
+                            </RelativeLayout>
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <!--                    Recycle View -->
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RV_images_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_above="@+id/send_layout"
+                        android:layout_below="@+id/tb_id"></androidx.recyclerview.widget.RecyclerView>
+
+
+                    <!--                    ENd RecycleView-->
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="15dp"
+                        android:visibility="gone"
+                        app:cardCornerRadius="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccent"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="Send a gift to start chatting"
+                                    android:textColor="@color/white"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="15dp"
+                                    android:background="@drawable/d_border_white"
+                                    android:paddingStart="30dp"
+                                    android:paddingTop="8dp"
+                                    android:paddingEnd="30dp"
+                                    android:paddingBottom="8dp"
+                                    android:text="Send a gift"
+                                    android:textColor="@color/white"
+                                    android:textSize="14dp" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="30dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/current_location"
+                            android:textColor="@color/black"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/distance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sahiwal, Punjab (~90 km away)"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/share_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/d_gray_border"
+                        android:gravity="center"
+                        android:text="@string/share_this_profile"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/report_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/block_or_report"
+                        android:textColor="@color/purple"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@color/white" />
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="50"
+                    android:text="@string/username_age"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/user_name"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/move_left"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_swipe_left"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/left_overlay"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_delete" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/right_overlay"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerInParent="true"
+                            android:padding="2dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_profile_edit" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/move_right"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerVertical="true"
+
+                            android:src="@drawable/ic_swipe_right"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</FrameLayout>

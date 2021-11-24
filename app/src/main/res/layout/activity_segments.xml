@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.Segments_A">
+
+    <com.carlosmuvi.segmentedprogressbar.SegmentedProgressBar
+        android:id="@+id/segment_bar_id"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="-2dp"
+        app:container_color="@color/white"
+        app:fill_color="@color/purple"
+        app:gap_size="-4dp"
+        app:segment_count="4" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/segment_bar_id" />
+
+</RelativeLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.Relationship_A">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/relationship_TB_id"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="-15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/relationship_back_id"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="12dp"
+                app:srcCompat="@drawable/ic_back_gray" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/relationship_back_id"
+                android:text="@string/relationship"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/relationship_view_id"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/relationship_TB_id"
+        android:background="@drawable/t_to_b_shadow" />
+
+
+    <ListView
+        android:id="@+id/simple_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relationship_view_id"></ListView>
+
+
+    <RadioGroup
+        android:id="@+id/relationship_RG_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relationship_view_id"
+        android:checkedButton="@id/noans_rb_id"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/noans_rb_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@drawable/d_border_bottom"
+            android:gravity="start"
+            android:layoutDirection="rtl"
+            android:paddingStart="15dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="No answer"
+            tools:ignore="RtlCompat" />
+
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@drawable/d_border_bottom"
+            android:gravity="start"
+            android:layoutDirection="rtl"
+            android:paddingStart="15dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="i'm in a complicated relationship"
+            tools:ignore="RtlCompat" />
+
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@drawable/d_border_bottom"
+            android:gravity="start"
+            android:layoutDirection="rtl"
+            android:paddingStart="15dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="Single"
+            tools:ignore="RtlCompat" />
+
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@drawable/d_border_bottom"
+            android:gravity="start"
+            android:layoutDirection="rtl"
+            android:paddingStart="15dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="Taken"
+            tools:ignore="RtlCompat" />
+
+    </RadioGroup>
+
+</RelativeLayout>

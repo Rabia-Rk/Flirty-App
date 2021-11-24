@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:clickable="true"
+    tools:context=".Boost.Boost_F">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/transparent_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.9"
+            android:background="@color/black" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="15dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:cardCornerRadius="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/d_boost_gradient"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:gravity="center"
+                    android:text="@string/introducting_hugme_boost"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/ic_boost" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/skip_the_line"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:gravity="center"
+                    android:text="@string/be_the_top_profile_in_your_area_for_30_minutes_and_get_more_watchs"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/white"
+                    android:gravity="center">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/boost_btn"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@drawable/d_round_blue_background"
+                            android:text="@string/boost_me"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</FrameLayout>

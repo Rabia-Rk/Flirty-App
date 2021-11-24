@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/Main_F"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="-15dp"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_app_logo_hor" />
+
+                <ImageView
+                    android:id="@+id/control_IV_id"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:padding="4dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_controls" />
+
+                <ImageView
+                    android:id="@+id/main_f_setting_id"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="10dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_setting" />
+
+                <ImageView
+                    android:id="@+id/main_f_edit_id"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:padding="10dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_edit_prof" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <Flirty_Datting_App.Utils.Custom_ViewPager
+            android:id="@+id/main_f_vp_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tablayout_rl_id"
+            android:layout_below="@+id/toolbar"
+            android:background="@drawable/d_border_bottom_offwhite"></Flirty_Datting_App.Utils.Custom_ViewPager>
+
+        <RelativeLayout
+            android:id="@+id/tablayout_rl_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/tablayout_top_border">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tablayout_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    app:tabBackground="@color/white"
+                    app:tabGravity="fill"
+                    app:tabIndicatorColor="@android:color/transparent"
+                    app:tabMode="fixed"
+                    app:tabRippleColor="@android:color/transparent" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>
