@@ -4,8 +4,8 @@
     <string name="app_name">Flirty Datting App</string>
 
     
-    <string name="facebook_app_id">432563448262381</string>
-    <string name="fb_login_protocol_scheme">fb432563448262381</string>
+    <string name="facebook_app_id">220138103593469</string>
+    <string name="fb_login_protocol_scheme">fb220138103593469</string>
 
     
 
@@ -21,7 +21,7 @@
     
    
 
-    <string name="firebase_server_key" tools:ignore="MissingTranslation">firebase_server_key_here</string>
+    <string name="firebase_server_key" tools:ignore="MissingTranslation">AAAAjVls-DI:APA91bF76tKjyDQUZoTLk0PWx4tK44rNif_biF1sxhPE4Bdaad2m5yFSzf6SZYig5_lETLTFDgb3mDLUA8RGbXB5XhO3ESxt37iqy7u2uSGww9eyx7qlFqd5Kv_u4kmJNtBAVoX4n7WT</string>
     
     
 
